@@ -10,7 +10,6 @@ class UserCreate(BaseModel):
     username: str
     password: str
 
-
 class UserResponse(BaseModel):
     id: int
     email: str
@@ -18,12 +17,12 @@ class UserResponse(BaseModel):
     class Config:
         from_attributes = True
 
-
 # schema for the user login information
 class UserLogin(BaseModel):
     identifier: str
     password: str
 
+# ===================== TOKEN DATA SCHEMAS ===================
 
 class Token(BaseModel):
     access_token: str
@@ -32,7 +31,7 @@ class Token(BaseModel):
 class Token_data(BaseModel):
     id: Optional[int] = None
 
-# ============ API KEY SCHEMAS =================
+# ====================== API KEY SCHEMAS ========================
 
 # Used to display safe information about a key (NO secret value)
 class ApiKeyInfo(BaseModel):

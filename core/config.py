@@ -16,6 +16,14 @@ class Settings(BaseSettings):
     REDIS_HOST: str 
     REDIS_PORT: int
 
+    """ To have TWO streams of Redis for high and lowpriority"""
+    # uncomment the following and comment the above lines 
+    
+    # REDIS_HOST_HIGH: str 
+    # REDIS_PORT_HIGH: int
+    # REDIS_HOST_LOW: str 
+    # REDIS_PORT_LOW: int
+
     # some rate limiting constants 
     RATE_LIMIT_PER_HOUR: int
     USER_RATE_LIMIT_PER_HOUR: int
