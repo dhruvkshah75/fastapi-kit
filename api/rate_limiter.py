@@ -6,6 +6,14 @@ from core.models import User
 from core.config import settings
 
 
+"""
+This redis based rate-limiter logic is used as dependency for the crud operations 
+to be used in, depending on the use case of the API
+
+USE:   @router.get("/", dependencies=[user_rate_limiter])
+
+"""
+
 class RateLimiter:
     """
     A Redis implemented sliding window rate limiter 
@@ -74,9 +82,3 @@ def user_rate_limiter(
             status_code=status.HTTP_429_TOO_MANY_REQUESTS,
             detail=f"Too many requests. Limit is {settings.USER_RATE_LIMIT_PER_HOUR}"
         )
-
-
-def ip_rate_limiter(
-        request 
-):
-    pass
