@@ -171,11 +171,3 @@ This project is provided under the terms in `LICENSE.md` (MIT License).
 
 ---
 
-If you'd like, I can also:
-
-- add a `Makefile` or a `dev` script to simplify common commands
-- add a sample `.env.example` file
-- add a minimal `docker-compose.yml` to bring up Postgres + Redis + the app for local development
-
-If you want any of the above, tell me which and I'll add it.
-
